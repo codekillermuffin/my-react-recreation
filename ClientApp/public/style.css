@@ -1,0 +1,102 @@
+body{
+    font: Roboto;
+}
+p{
+    margin: 0;
+}
+.half{
+    max-width: 50%;
+}
+.third{
+    max-width: 33.33%
+}
+.text-primary-color {
+    color: #44CCFF;
+}
+.text-light{
+    color:white;
+}
+.text-dark{
+    color:black;
+}
+.bg-primary-color {
+    background-color: #44CCFF;
+}
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.flex-item{
+    margin: 6px;
+}
+.top-header{
+    background-color: #F3F3F3;
+    color: black;
+    font: sans-serif;
+}
+.top-header.flex-container{
+    flex-direction: row-reverse;
+    justify-content:  flex-start;
+}
+.bottom-header.flex-container {
+    justify-content: flex-Start;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.bottom-header > a, .bottom-header > .flex-item {
+    margin: 10px 5px 10px;
+}
+.flex-container > .flex-item {
+    align-self: flex-start;
+}
+.flex-container > .flex-logo {
+    align-self: flex-end;
+}
+.flex-logo > .shape, .flex-logo > p{
+    display: inline-block;
+}
+.shape{
+    width: 36.31px;
+    height: 22px;
+    background: #44CCFF;
+}
+.square{
+    width: 20px;
+    height: 20px;
+}
+hr {
+    margin: 5rem 20px 5rem;
+}
+article{
+    margin: 4rem auto 4rem;
+}
+article.flex-container{
+    align-items: center;
+}
+ul.attributes{
+    list-style-type: none;
+}
+ul.attributes p, ul.attributes div{
+    display: inline-block;
+}
+h1.center{
+    margin: auto 20% 4rem;
+
+}
+.center{
+    text-align: center;
+    margin: 0 30px 0;
+}
+.component{
+    padding: 18px;
+    border-radius: 2px;
+    box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.37);
+}
+.component-header{
+    flex-direction: row;
+    justify-content: space-between;
+    display: flex;
+}
+.component > h2{
+}
