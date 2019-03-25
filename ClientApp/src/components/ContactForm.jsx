@@ -68,7 +68,7 @@ class ContactForm extends React.Component {
             this.state.company,
             this.state.description
         ]
-        let checklist: 0;
+        let checklist = 0;
         text.forEach(function (item, index){
             if (item !== ""){
                 checklist+=1;
