@@ -17,7 +17,7 @@ export default props => (
             </div>
             <div className="flex-item">
                 <a href="#contact" className="btn bg-primary-color text-light" role="button" aria-disabled="true">Prøv Gratis</a>
-                <a href="#contact" className="btn btn-secondary disabled" role="button" aria-disabled="true">
+                <a href="#contact" className="btn btn-secondary" role="button" aria-disabled="true">
                     <b className="text-dark">Login</b>
                 </a>
             </div>

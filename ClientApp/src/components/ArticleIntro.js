@@ -21,9 +21,10 @@ function renderArray() {
 const ArticleIntro = props => (
     <article>
         <div className="flex-container">
-            <div className="flex-item half">
+            <div className="flex-item half vertical-center">
                 <h1>Priser for bedrifter</h1>
                 <b>Din bedrift betaler per bruker per måned</b>
+                <b>Forutsigbart og enkelt</b>
                 <p>
                     Fyll i skjerma fhjskdh fisuyd fiusbnd itoe. gkdfjhgkd weirug
                     srtyuv  aui weyu  wfoiu. fwiuefbn wfuey  fspoi. gfjh

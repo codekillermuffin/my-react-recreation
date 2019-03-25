@@ -10,7 +10,9 @@ const ArticleContact = props => (
                 <p>Fyll in skjerma fhjskdh fisuyd fiusbnd itoeurn. tigeurh wygedu fieughi fhie gruni o9ne e</p>
             </div>
             <div className="flex-item half">
-                <ContactForm />
+                <div className="component">
+                    <ContactForm />
+                </div>
             </div>
         </div>
   </article>
