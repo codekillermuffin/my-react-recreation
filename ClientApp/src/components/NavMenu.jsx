@@ -1,13 +1,22 @@
 ﻿import React from 'react';
-import { Link } from 'react-router-dom';
 
 export default props => (
     <React.Fragment>
         <nav className="flex-container top-header">
             <div className="flex-item">
-                <p>Contact support</p>
+                    <p>Contact support</p>
+                </div>
+            <div className="flex-item">
+                <a href="#collapse1" className="downarrow" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse1">
+                    <img src="https://img.icons8.com/metro/26/000000/chevron-down.png" alt="dropdown icon"/>
+                </a>
             </div>
         </nav>
+        <div className="collapse" id="collapse1">
+            <div className="blue">
+            </div>
+        </div>
+
         <nav className="flex-container bottom-header">
             <div className="flex-item">
                 <div className="flex-logo">

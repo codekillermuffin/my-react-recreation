@@ -1,5 +1,13 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
-    font: Roboto;
+    font-family: Roboto;
+}
+.blue{
+    background-color: blue;
+    width: 100%;
+    height: 25vh;
 }
 p{
     margin: 0;
@@ -24,11 +32,30 @@ p{
 }
 .flex-container{
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-around;
 }
 .flex-item{
-    margin: 6px;
+    padding: 30px;
+    flex-basis: 0;
+    flex-grow: 1;
+}
+@media only screen and (max-width: 1000px) {
+    .flex-container{
+        flex-wrap: wrap;
+    }
+    .flex-item{
+        flex-basis: unset;
+    }
+}
+.flex-item > b, .flex-item > p {
+    display: block;
+}
+nav.flex-container > .flex-item{
+    padding: unset;
+    flex-basis: unset;
+    flex-grow: unset;
 }
 .top-header{
     background-color: #F3F3F3;
@@ -38,6 +65,15 @@ p{
 .top-header.flex-container{
     flex-direction: row-reverse;
     justify-content:  flex-start;
+}
+.top-header.flex-container > .flex-item{
+    margin: 5px 20px 5px;
+}
+.top-header.flex-container > .flex-item > .downarrow{
+    width: 40px;
+    height: 100%;
+    text-decoration: none;
+    color:black;
 }
 .bottom-header.flex-container {
     justify-content: flex-Start;
@@ -72,29 +108,66 @@ hr {
     margin: 5rem 20px 5rem;
 }
 article{
-    margin: 13vh auto 13vh
+    margin: 13vh auto 13vh;
 }
 article.flex-container{
     align-items: center;
 }
+.intro-card{
+    text-align: center;
+    max-width: 70%;
+}
+ul, .intro-card small{
+    text-align: left;
+    display: block;
+}
 ul.attributes{
     list-style-type: none;
+    padding: unset;
+    margin: auto;
 }
-ul.attributes p, ul.attributes div{
+ul.attributes p{
     display: inline-block;
+    margin-left: 20px;
 }
-h1.center{
-    margin: auto 20% 4rem;
-
+.price-container{
+    padding: 30px;
+}
+.price-container > .flex-item{
+    padding: unset;
+}
+.button-container{
+    justify-content: space-between;
+    padding: 30px;
+}
+.button-container > .flex-item{
+    padding: unset;
 }
 .center{
     text-align: center;
     margin: 0 30px 0;
 }
+h1.center{
+    margin: auto 20% 4rem;
+}
+@media only screen and (max-width: 950px) {
+    h1.center{
+        margin: auto;
+    }
+}
 .component{
+    margin: 8px;
     padding: 20px;
     border-radius: 2px;
-    box-shadow: 1px 1px 5px -2px rgba(0,0,0,0.37);
+    box-shadow: 1px 1px 10px -2px rgba(0,0,0,0.37);
+}
+.component.intro-card{
+    margin: auto;
+}
+@media only screen and (max-width: 550px) {
+    .intro-card{
+        max-width:100%;
+    }
 }
 .component-header{
     flex-direction: row;
@@ -106,7 +179,10 @@ h1.center{
 form > div{
     width:100%;
 }
-form.flex-container {
+form > .flex-container {
     flex-direction: row-reverse;
     justify-content: flex-start;
+}
+form > .flex-container > .flex-item{
+    flex-grow: unset;
 }
