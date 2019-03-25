@@ -32,6 +32,7 @@ class ContactForm extends React.Component {
         };
 
         this.handleClick = this.handleClick.bind(this);
+        this.boolErrorComponent = this.boolErrorComponent.bind(this);
     }
 
     handleChange = email => event => {
@@ -55,6 +56,7 @@ class ContactForm extends React.Component {
         });
     };
     handleClick(e) {
+        let errorStatus = Object.assign(this.state.errorStatus);
         let helperText = Object.assign(this.state.helperText);
         let emptyHelperText = [
                 "You need to have an email",
@@ -72,19 +74,30 @@ class ContactForm extends React.Component {
         text.forEach(function (item, index){
             if (item !== ""){
                 checklist+=1;
-                helperText[index] = ""
+                helperText[index] = "";
+                errorStatus[index] = false;
             }
             else{
-                helperText[index] = emptyHelperText[index]
+                helperText[index] = emptyHelperText[index];
+                errorStatus[index] = true;
             }
         });
-        if(checklist > 1){
+        if(checklist === 4){
             this.setState({
                 completed: true
             });
         }
-        else this.setState({ helperText:helperText })
-        console.log('The link was clicked.' + checklist + ' fields was correct.');
+        else this.setState({
+            helperText: helperText,
+            errorStatus: errorStatus
+        })
+        console.log(checklist + ' fields were correct.');
+    }
+    boolErrorComponent = id => {
+        let errorStatus = Object.assign(this.state.errorStatus);
+        if (errorStatus[id]){
+            return "error"
+        }
     }
 
     render() {
@@ -100,7 +113,8 @@ class ContactForm extends React.Component {
         else return (
             <form className={classes.container} autoComplete="off">
                 <TextField
-                    id="outlined-email-input"
+                    error= { this.boolErrorComponent(0) }
+                    id= "outlined-email-input"
                     label="Email"
                     className={classes.textField}
                     value={this.state.email}
@@ -113,38 +127,41 @@ class ContactForm extends React.Component {
                     variant="outlined"
                 />
                 <TextField
-                  id="outlined-name"
-                  label="Mobil"
-                  className={classes.textField}
-                  value={this.state.number}
-                  onChange={this.handleChange('number')}
-                  helperText={this.state.helperText[1]}
-                  margin="normal"
-                  variant="outlined"
+                    error= { this.boolErrorComponent(1) }
+                    id="outlined-name"
+                    label="Mobil"
+                    className={classes.textField}
+                    value={this.state.number}
+                    onChange={this.handleChange('number')}
+                    helperText={this.state.helperText[1]}
+                    margin="normal"
+                    variant="outlined"
                 />
 
                 <TextField
-                  id="outlined-name"
-                  label="Firmanavn"
-                  className={classes.textField}
-                  value={this.state.company}
-                  onChange={this.handleChange('company')}
-                  helperText={this.state.helperText[2]}
-                  margin="normal"
-                  variant="outlined"
+                    error= { this.boolErrorComponent(2) }
+                    id="outlined-name"
+                    label="Firmanavn"
+                    className={classes.textField}
+                    value={this.state.company}
+                    onChange={this.handleChange('company')}
+                    helperText={this.state.helperText[2]}
+                    margin="normal"
+                    variant="outlined"
                 />
 
                 <TextField
-                  id="outlined-multiline-static"
-                  label="Fortell litt om din bedrift..."
-                  multiline
-                  rows="4"
-                  value={this.state.description}
-                  onChange={this.handleChange('description')}
-                  className={classes.textField}
-                  helperText={this.state.helperText[3]}
-                  margin="normal"
-                  variant="outlined"
+                    error= { this.boolErrorComponent(3) }
+                    id="outlined-multiline-static"
+                    label="Fortell litt om din bedrift..."
+                    multiline
+                    rows="4"
+                    value={this.state.description}
+                    onChange={this.handleChange('description')}
+                    className={classes.textField}
+                    helperText={this.state.helperText[3]}
+                    margin="normal"
+                    variant="outlined"
                 />
                 <div className="flex-container">
                     <Button onClick={this.handleClick} variant="contained" size="large" color="primary" className= {classes.margin + " flex-item"} >
