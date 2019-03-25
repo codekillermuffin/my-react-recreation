@@ -43,7 +43,7 @@ const ArticleIntro = props => (
                     brukerens tilganger på desktop.
                 </p>
             </div>
-            <div className="flex-item">
+            <div className="flex-item art-bg">
                 <div className="component intro-card">
                     <h2>24SevenOffice</h2>
                     <h2>Start</h2>

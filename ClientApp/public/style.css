@@ -116,6 +116,10 @@ article.flex-container{
 .intro-card{
     text-align: center;
     max-width: 70%;
+    background-color: white;
+}
+.art-bg{
+    background-image: url("/images/bg.svg");
 }
 ul, .intro-card small{
     text-align: left;
