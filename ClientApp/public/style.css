@@ -30,6 +30,9 @@ p{
 .bg-primary-color {
     background-color: #44CCFF;
 }
+.bg-secondary-color {
+    background-color: #112233
+}
 .flex-container{
     display: flex;
     flex-wrap: nowrap;

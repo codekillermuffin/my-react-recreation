@@ -57,12 +57,12 @@ const ArticleIntro = props => (
                     <ul className="attributes">{ renderArray() }</ul>
                     <div className="flex-container button-container">
                         <div className="flex-item">
-                            <a href="#collapse2" className="btn btn-primary" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapse2">
+                            <a href="#collapse2" className="btn bg-primary-color text-light" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapse2">
                                 Prøv gratis
                             </a>
                     </div>
                         <div className="flex-item">
-                            <a href="#contact" className="btn btn-primary" role="button" aria-pressed="true">
+                            <a href="#contact" className="btn bg-secondary-color text-light" role="button" aria-pressed="true">
                                 Få tilbud
                             </a>
                         </div>
